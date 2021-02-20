@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from dbcon1.sql_app.crudpy import models, schemas
+from sql_app import models, schemas
 
 
 def get_user_by_username(db: Session, username: str):

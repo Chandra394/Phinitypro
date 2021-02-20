@@ -4,15 +4,10 @@ import uvicorn
 from sqlalchemy.orm import Session
 from fastapi import Depends, FastAPI, HTTPException
 
-import sys
+import sql_app
 
-sys.path.append('pythonpkg/Lib/site-packages')
-
-
-import pythonpkg
-
-from dcon1.sql_app.mainpy import models, schemas, crud
-from dbcon1.sql_app.mainpy.database import SessionLocal, engine
+from sql_app import models, schemas, crud
+from sql_app.database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
 
