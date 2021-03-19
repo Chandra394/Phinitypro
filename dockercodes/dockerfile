@@ -1,0 +1,12 @@
+# docker file, image, container
+From python:3.9
+
+ADD demo.py .
+
+#dependencies: install requests and beautifulsoup4
+#CMD [ "python","./demo.py" ] will run demo.py in our container terminal
+RUN pip install requests beautifulsoup4
+
+CMD [ "python","./demo.py" ] 
+
+#next run the docker file using the command docker build -t pythonimbd .(t stands for txt and pythonimbd is the name of the image and "." is the location)
